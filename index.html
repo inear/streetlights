@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Streetlights</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta property="og:title" content="Streetlights" />
+  <meta property="og:description" content="Make a lonely dark street ready for christmas with this interactive experiment built in webgl with three.js and cannon.js."/>
+  <!-- @if NODE_ENV='dev' -->
+  <link rel="stylesheet" href="build/main.css">
+  <!-- @endif -->
+
+  <!-- @if NODE_ENV='prod' -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- @endif -->
+
+</head>
+<body>
+  <div id="stage">
+    <canvas id="mainCanvas"></canvas>
+  </div>
+  <div id="errorWrapper" class="inactive table">
+    <div id="error" class="table-cell">
+      <div class="error-copy">
+        You have to add a <i>WebGL</i> supported browser and device to the wish list this year. Without that you can't turn on the lights on this street.
+      </div>
+    </div>
+  </div>
+
+  <!--[if lt IE 10]>
+  <script src='vendors/history.min.js'></script>
+  <script src='vendors/es5-shim.js'></script>
+  <![endif]-->
+
+  <!--<script type="text/javascript" src="vendors/dat.gui.js"></script>-->
+
+  <!-- build:js js/scripts.js -->
+  <script src='vendors/modernizr-2.6.2.custom.js'></script>
+
+  <script type="text/javascript" src="vendors/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="vendors/three.js"></script>
+  <script type="text/javascript" src="vendors/TweenMax.js"></script>
+  <script type="text/javascript" src="vendors/SubdivisionModifier.js"></script>
+  <script type="text/javascript" src="vendors/mousetrap.min.js"></script>
+  <script type="text/javascript" src="vendors/howler.js"></script>
+  <script type="text/javascript" src="vendors/cannon.js"></script>
+
+  <script src="vendors/postprocessing/EffectComposer.js"></script>
+  <script src="vendors/postprocessing/TexturePass.js"></script>
+  <script src="vendors/postprocessing/BloomPass.js"></script>
+  <script src="vendors/postprocessing/SavePass.js"></script>
+  <script src="vendors/postprocessing/MaskPass.js"></script>
+  <script src="vendors/postprocessing/RenderPass.js"></script>
+  <script src="vendors/postprocessing/ShaderPass.js"></script>
+  <script src="vendors/postprocessing/FilmPass.js"></script>
+  <script src="vendors/postprocessing/PPShaders.js"></script>
+  <script src="vendors/shaders/ConvolutionShader.js"></script>
+  <script src="vendors/shaders/CopyShader.js"></script>
+  <script src="vendors/shaders/FXAAShader.js"></script>
+  <script src="vendors/shaders/VerticalBlurShader.js"></script>
+  <script src="vendors/shaders/HorizontalBlurShader.js"></script>
+  <script src="vendors/shaders/VignetteShader.js"></script>
+
+
+  <script src='build/app.js'></script>
+  <!-- endbuild -->
+
+  <!-- @if NODE_ENV='dev' -->
+
+  <!-- @endif -->
+
+  <!-- @if NODE_ENV='prod' -->
+  <!--<script src='app.js'></script>-->
+  <!-- @endif -->
+
+
+
+  <script>require('lights/app');</script>
+
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-181266-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
